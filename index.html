@@ -1,0 +1,265 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-[#fbf8f9] group/design-root overflow-x-hidden"
+      style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(148,81,91)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e'); font-family: Manrope, &quot;Noto Sans&quot;, sans-serif;"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f2e8ea] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#1a0e10]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-[#1a0e10] text-lg font-bold leading-tight tracking-[-0.015em]">Churn Predictor</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#1a0e10] text-sm font-medium leading-normal" href="#">Home</a>
+              <a class="text-[#1a0e10] text-sm font-medium leading-normal" href="#">About</a>
+              <a class="text-[#1a0e10] text-sm font-medium leading-normal" href="#">Contact</a>
+            </div>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#e03851] text-[#fbf8f9] text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Sign Up</span>
+            </button>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <h2 class="text-[#1a0e10] tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">Predict Customer Churn</h2>
+            <p class="text-[#1a0e10] text-base font-normal leading-normal pb-3 pt-1 px-4 text-center">Enter customer details to predict the likelihood of churn.</p>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <input
+                  placeholder="Customer ID"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 bg-[image:--select-button-svg] placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Gender</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 bg-[image:--select-button-svg] placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Senior Citizen</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 bg-[image:--select-button-svg] placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Partner</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 bg-[image:--select-button-svg] placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Dependents</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <input
+                  placeholder="Tenure (months)"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 bg-[image:--select-button-svg] placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Phone Service</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 bg-[image:--select-button-svg] placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Multiple Lines</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 bg-[image:--select-button-svg] placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Internet Service</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 bg-[image:--select-button-svg] placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Online Security</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 bg-[image:--select-button-svg] placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Device Protection</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 bg-[image:--select-button-svg] placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Tech Support</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 bg-[image:--select-button-svg] placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Streaming TV</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 bg-[image:--select-button-svg] placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Streaming Movies</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 bg-[image:--select-button-svg] placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Contract</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 bg-[image:--select-button-svg] placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Paperless Billing</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <select
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 bg-[image:--select-button-svg] placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                >
+                  <option value="one">Payment Method</option>
+                  <option value="two">two</option>
+                  <option value="three">three</option>
+                </select>
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <input
+                  placeholder="Monthly Charges"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <input
+                  placeholder="Total Charges"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1a0e10] focus:outline-0 focus:ring-0 border border-[#e6d1d4] bg-[#fbf8f9] focus:border-[#e6d1d4] h-14 placeholder:text-[#94515b] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex px-4 py-3 justify-center">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#e03851] text-[#fbf8f9] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Predict Churn</span>
+              </button>
+            </div>
+            <p class="text-[#1a0e10] text-base font-normal leading-normal pb-3 pt-1 px-4 text-center">Churn Prediction: 15%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
