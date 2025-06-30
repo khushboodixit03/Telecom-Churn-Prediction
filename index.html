@@ -61,10 +61,11 @@
       </form>
 
       {% if prediction %}
-      <div class="text-center text-lg mt-4">
-        📈 Churn Probability: <strong>{{ prediction }}</strong>
-      </div>
-      {% endif %}
+    <div class="result">
+    <strong>Churn Prediction:</strong> {{ prediction }}<br>
+    {% if probability %}
+    <strong>Probability:</strong> {{ probability }}
+    {% endif %}
     </div>
   </main>
 

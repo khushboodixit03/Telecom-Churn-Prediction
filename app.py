@@ -28,9 +28,11 @@ for col in categorical_cols:
 @app.route('/', methods=['GET', 'POST'])
 def index():
     prediction = None
+    probability = None
 
     if request.method == 'POST':
         try:
+            # Collect data from form
             form_data = {
                 'gender': request.form['gender'],
                 'SeniorCitizen': int(request.form['SeniorCitizen']),
@@ -65,13 +67,16 @@ def index():
                 df[['Tenure', 'MonthlyCharges', 'TotalCharges']]
             )
 
-            # Predict
+            # Predict probability and label
             prob = model.predict_proba(df)[:, 1][0]
-            prediction = f"{prob * 100:.2f}%"
+            probability = f"{prob * 100:.2f}%"
+            prediction = "Yes" if prob >= 0.5 else "No"
+
         except Exception as e:
             prediction = f"Error: {str(e)}"
+            probability = None
 
-    return render_template('index.html', prediction=prediction)
+    return render_template('index.html', prediction=prediction, probability=probability)
 
 if __name__ == '__main__':
     app.run(debug=True)
