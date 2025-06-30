@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Churn Predictor</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+</head>
+<body class="bg-[#fbf8f9] min-h-screen flex flex-col font-sans">
+  <header class="p-4 border-b bg-white">
+    <h1 class="text-2xl font-bold">Churn Predictor</h1>
+  </header>
+
+  <main class="flex-grow flex justify-center items-start p-8">
+    <div class="bg-white rounded-lg shadow p-6 w-full max-w-lg space-y-4">
+      <h2 class="text-xl font-semibold text-center">Enter Customer Details</h2>
+      <form method="POST" action="/predict" class="grid grid-cols-1 gap-4">
+        <!-- Categorical and numeric inputs matching your trained feature names -->
+        <select name="gender" required class="form-input">
+          <option disabled selected>Gender</option>
+          <option>Male</option><option>Female</option>
+        </select>
+        <select name="SeniorCitizen" required class="form-input">
+          <option disabled selected>Senior Citizen</option>
+          <option value="0">No</option><option value="1">Yes</option>
+        </select>
+        <select name="Partner" required class="form-input">
+          <option disabled selected>Partner</option>
+          <option>Yes</option><option>No</option>
+        </select>
+        <select name="Dependents" required class="form-input">
+          <option disabled selected>Dependents</option>
+          <option>Yes</option><option>No</option>
+        </select>
+        <input type="number" name="tenure" placeholder="Tenure (months)" required class="form-input"/>
+        <input type="number" name="MonthlyCharges" step="0.01" placeholder="Monthly Charges" required class="form-input"/>
+        <input type="number" name="TotalCharges" step="0.01" placeholder="Total Charges" required class="form-input"/>
+
+        <select name="InternetService" required class="form-input">
+          <option disabled selected>Internet Service</option>
+          <option>DSL</option><option>Fiber optic</option><option>No</option>
+        </select>
+        <select name="Contract" required class="form-input">
+          <option disabled selected>Contract Type</option>
+          <option>Month-to-month</option><option>One year</option><option>Two year</option>
+        </select>
+        <select name="PaperlessBilling" required class="form-input">
+          <option disabled selected>Paperless Billing</option>
+          <option>Yes</option><option>No</option>
+        </select>
+        <select name="PaymentMethod" required class="form-input">
+          <option disabled selected>Payment Method</option>
+          <option>Electronic check</option><option>Mailed check</option><option>Bank transfer (automatic)</option><option>Credit card (automatic)</option>
+        </select>
+
+        <div>
+          <button type="submit" class="w-full bg-red-600 text-white font-semibold py-2 rounded hover:bg-red-700">
+            Predict Churn
+          </button>
+        </div>
+      </form>
+
+      {% if prediction %}
+      <div class="text-center text-lg mt-4">
+        📈 Churn Probability: <strong>{{ prediction }}</strong>
+      </div>
+      {% endif %}
+    </div>
+  </main>
+
+  <footer class="p-4 text-center">
+    <small>Powered by your Telco Churn Model</small>
+  </footer>
+</body>
+</html>
