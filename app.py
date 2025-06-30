@@ -31,7 +31,6 @@ def index():
 
     if request.method == 'POST':
         try:
-            # Collect input data from form
             form_data = {
                 'gender': request.form['gender'],
                 'SeniorCitizen': int(request.form['SeniorCitizen']),
@@ -69,7 +68,6 @@ def index():
             # Predict
             prob = model.predict_proba(df)[:, 1][0]
             prediction = f"{prob * 100:.2f}%"
-
         except Exception as e:
             prediction = f"Error: {str(e)}"
 
